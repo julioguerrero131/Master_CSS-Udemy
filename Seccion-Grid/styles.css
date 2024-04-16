@@ -1,0 +1,80 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.layout {
+    width: 80%; /* Grid es Responsive */
+    min-height: 500px;
+    /* El tamanio de las cajas se adapta cuando hay altura fija */
+    display: grid;
+    margin: 0px auto;
+    padding: 10px;
+    border: 3px solid #444; 
+    /* Se aplica al contenedor */
+    gap: 10px;
+    /* Genera espacios entre elementos, no con los bordes */
+
+    /* COLUMNAS */
+    grid-template-columns: 50% 45%;
+    /* Define numero de columnas y tamanio */
+    grid-template-columns: repeat(4, 25%);
+    /* Cuando todas las columnas tienen el mismo tamanio */
+    grid-template-columns: repeat(2, 25%) 15% 10%;
+    /* Se pueden combinar */
+    grid-template-columns: repeat(3, 1fr);
+    /* Puedo usar como medida fracciones */
+    /* Reparten un mismo espacio equitativamente */
+
+    /* FILAS */
+    grid-template-rows: repeat(2, 1fr) 2fr;
+    /* Se pondran mas filas si el contenido lo necesita */
+}
+
+.layout .caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 20px;
+    border: 4px solid #222;
+    background: gray;
+}
+
+.layout .red {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /* Indicamos de que linea a que linea va esa caja especifica */
+    /* Permite ampliar cajas en especifico */
+    /* Lo que no avanza en la misma fila, se a abajo-izquierda */
+    background-color: red;
+}
+
+.layout .blue {
+    grid-column: 2 / 4;
+    background-color: blue;
+}
+
+.layout .green {
+    background-color: green;
+}
+
+.layout .pink {
+    grid-row-start: 3;
+    grid-row-end: 5; /* Expandir fila */
+    grid-column: 2 / 4;
+    background-color: pink;
+}
+
+.layout .orange {
+    grid-row: 3 / 5; /* resume las dos tambien */
+    background-color: orange;
+}
+
+.layout .lightblue {
+    /*
+    grid-column-start: 1;
+    grid-column-end: 3;
+    */
+    grid-column: 1 / 4; /*  resume las dos */
+    background-color: lightblue;
+}

@@ -1,0 +1,110 @@
+/*
+Ejercicio CSS
+1. Crear un HTML y vincularlo
+2. Crear estructura HTML que cumpla con: 
+    Contenedor General, Cabecera, Menu, Barra Lateral, Contenido Principal (con elementos), Footer
+3. Todo debe estar dentro del contenedor general, con ancho de 1200px, debe estar centrado
+4. Header que ocupa el 100% del ancho, con un texto grande centrado
+5. El Menu tiene los elementos uno al lado de otro
+6. El Contenido Principal con ancho del 70%
+7. El contenido dentro del Contenido Principal debe ser una cuadricula con 4 lineas de 2 cajas
+8. La Barra Lateral debe tener un ancho del 30%
+9. Footer con ancho del 100% y estar al final 
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#general {
+    width: 1200px;
+    margin: 0px auto; /* Centra el contenido */
+    margin-top: 20px;
+    border: 1px solid #ccc;
+}
+
+#header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(46, 46, 180);
+    color: white;
+    text-align: center;
+    line-height: 70px;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+#menu {
+    background-color: #eeeeee;
+    
+}
+
+#menu ul li {
+    /* display: inline-block; */ 
+    display: block; /* 2 formas de poner uno al lado de otro */
+    float: left;
+    border-right: 1px solid #ccc;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 15px;
+    color: #444;
+}
+
+#menu ul li:hover {
+    background-color: rgb(32, 32, 129);
+    cursor: pointer;
+}
+
+#menu ul li:hover a {
+    color: white;
+}
+
+#contenido {
+    float: left;
+    width: 69%;
+    border: 1px solid #ccc;
+}
+
+#lateral {
+    float: left;
+    width: 30%;
+    border: 1px solid #ccc;
+    min-height: 500px;
+    text-align: center;
+}
+
+#contenido > h1 { /* Deben estar seguidos */
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    color: #444;
+}
+
+#contenido .caja {
+    width: 40%;
+    height: 250px;
+    background-color: #444;
+    border: 5px solid #ccc;
+    color: #ccc;
+    float: left;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+footer {
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background-color: #eee;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #ccc;
+}

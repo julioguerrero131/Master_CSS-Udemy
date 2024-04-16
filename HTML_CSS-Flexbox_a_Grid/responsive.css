@@ -1,0 +1,53 @@
+@media (max-width:780px) {
+
+    #header {
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 140px;
+        padding-bottom: 20px;
+    }
+
+    #header h1 {
+        text-align: center;
+    }
+
+    #content {
+        grid-template-columns: 1fr;
+        align-items: start;
+        justify-content: center;
+        column-gap: auto;
+    }
+    
+    #projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #aside {
+        margin: 0px;
+        padding: 15px;
+    }
+
+    #aside ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+    }
+
+    #footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    #footer .info {
+        margin-left: 0px;
+    }
+
+}

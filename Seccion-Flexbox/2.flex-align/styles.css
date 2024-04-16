@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    --rojo: red;
+}
+
+#layout {
+    display: flex; 
+    flex-flow: row wrap;
+
+    /* ALINEACION HORIZONTAL */
+    justify-content: space-between;
+    /* alinea las cajas de adentro */
+    /* center permite que sea mas facil centrar elementos */
+    /* Se puede left y right (hay flex-start y flex-end) */
+    /* space-around distribuye el contenido dejando espacio entre cada uno y los bordes*/
+    /* space-between es parecido al anterior, pero en deja espacio entre las cajas y el borde */
+    /* space-evening hace lo mismo que space-around, apenas se diferencia */
+
+    /* ALINEACION VERTICAL */
+    align-items: flex-start;
+    /* baseline ajusta el tamanio de la caja interior al contenido en ella */
+    /* Las cajas interiores entaran a la mitan del contenedor */
+    /* 100vh indica cuanto ocupa el vertical-heigth, en este caso, el 100% (es una medida) */
+    /* flex-start y flex-end estan disponibles (arriba y abajo) */
+
+    width: auto;
+    height: 700px;
+    border: 3px solid black;
+    padding: 5px;
+}
+
+.caja {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border: 4px solid #222;
+    background-color: gray;
+}
+
+
+.red {
+    align-self: flex-start;
+    /* Alinear a si mismo verticalmente */
+    background-color: var(--rojo); 
+}
+
+.green {
+    align-self: center;
+    background-color: green;
+}
+
+.blue {
+    align-self: center;
+    background-color: blue;
+}
+
+.orange {
+    align-self: flex-end;
+    background-color: orange;
+}

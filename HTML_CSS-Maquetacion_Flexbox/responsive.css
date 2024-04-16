@@ -1,0 +1,56 @@
+@media (max-width:1360px) {
+    #header {
+        text-align: center;
+    }
+    
+    #menu > ul {
+        margin-top: 20px;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:670px) {
+
+    #content {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    #aside {
+        margin-right: 0px;
+    }
+
+    #aside ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    #aside ul li {
+        flex-grow: 1;
+        margin: 5px;
+    }
+
+    #projects {
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+
+    #footer .info {
+        flex-grow: 1;
+        order: 2;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+        padding-bottom: 20px;
+    }
+
+    #footer .logo {
+        flex-grow: 1;
+        order: 1;
+        flex-basis: 100%;
+        text-align: center;
+        margin: 0px;
+    }
+}
